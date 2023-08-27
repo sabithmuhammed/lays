@@ -6,7 +6,7 @@
     padding: 0;
     font-family: "Mark OT Bold", sans-serif;
     box-sizing: border-box;
-    /* "MarkOT-Medium" */
+    
 }
 
 
@@ -577,8 +577,11 @@ main {
 .get-social{
     width: 100%;
     height: 791px;
-    background-color: #7122a5;
+    background-color: #01ABE7;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .get-social-top-banner{
     width: 100%;
@@ -588,14 +591,132 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
+    top: 0;
 }
-
+.get-social-bottom-banner{
+    background-color: #961612;
+    width: 100%;
+    height: 34%;
+    position: absolute;
+    background-image: url('/images/banners/social-bottom.jpeg');
+    bottom: 0;
+}
+.get-social-tiles-container{
+    width: 86%;
+    height: 506px;
+    margin-top: 5%;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(4,252px);
+    grid-template-rows: repeat(2,252px);
+}
+.get-social-tiles{
+    position: relative;
+}
+.get-social-tiles >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.play{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 45%;
+    font-size: 60px;
+    opacity: .5;
+}
+.fa-instagram{
+    position: absolute;
+    bottom: 24px;
+    right: 13px;
+    z-index: 2;
+}
+.get-social-tiles:hover >.social-description{
+    opacity: 1;
+    
+    transition: all .8s ease;
+}
+.social-description{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    
+}
+.description-text{
+    width: 100%;
+    height: 85%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(162, 162, 162);
+    
+}
+.description-text p {
+    font-size: 14px;
+    font-family:"MarkOT-Medium";
+    padding-top: 5px;
+}
+.description-text h3{
+    text-decoration: underline;
+    color: #808080;
+}
+.description-bottom{
+    font-family:"MarkOT-Medium";
+    display: flex;
+    padding-top: 10px;
+    padding-left: 80px;
+    justify-content: space-between;
+    font-size: 13px;
+    
+    align-items: center;
+    color: #808080;
+}
+a{
+    color: #808080;
+}
+.connect{
+    width: 100%;
+    height: 174px;
+    background-image: url('/images/banners/connect.jpeg');
+    background-size: contain;
+    position: relative;
+}
+.icons-container{
+    width: 49%;
+    height: 58%;
+    position: absolute;
+    right: 10%;
+    top: 21%;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+.icons{
+    
+    padding-left: 19px;
+    padding-top: 5px;
+    
+}
+.icons:hover{
+    animation: pulse 0.6s 1;
+}
+footer{
+height: 190px;
+width :100%;
+background-color: red;
+}
 @keyframes pulse {
     0%{
         transform: scale(1);
     }
     50%{
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
     100%{
         transform: scale(1);
