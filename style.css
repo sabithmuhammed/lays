@@ -22,6 +22,12 @@
     transition: all 0.3s ease;
     
 }
+.animation{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
 .animation:hover .zoom {
     transform: scale(1.1);
 }
@@ -33,6 +39,7 @@
     border-radius: 50%;
     background-color: #961612;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .scroll-bar-hide::-webkit-scrollbar {
@@ -516,11 +523,6 @@ main {
     object-fit: cover;
 
 }
-.video-text{
-    width: 30%;
-    height: 100%;
-    background-color: #DA291C;
-}
 .yt-play{
     width: 64px;
     height: 48px;
@@ -536,10 +538,57 @@ main {
     margin: auto;
     z-index: 5;
 }
+.video-text{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.video-text >h1{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+.btn-video{
+    width: 145px;
+}
+.videos-round-btn-container{
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 45px;
+    z-index: 4;
+    display: flex;
+    padding-left: 33%;
+}
 
-
-
-
+.videos-round-btn{
+    background-color: #01612C;
+}
+.videos-round-btn:hover{
+    background-color: #DA291C;
+}
+.videos-round-btn-container >.selected{
+    background-color: #DA291C;
+}
+.get-social{
+    width: 100%;
+    height: 791px;
+    background-color: #7122a5;
+    position: relative;
+}
+.get-social-top-banner{
+    width: 100%;
+    height: 22%;
+    background-color: #DA291C;
+    background-image: url('/images/banners/social-top.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
 
 @keyframes pulse {
     0%{
