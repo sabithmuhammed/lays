@@ -1,25 +1,56 @@
 @import url(https://db.onlinewebfonts.com/c/40a15735398302b3d41fd11c805085f4?family=Mark+OT+Bold);
 @import url(https://db.onlinewebfonts.com/c/450fdebcd9b47d4e245c0272405e0cf2?family=MarkOT-Medium);
-*{
+
+* {
     margin: 0;
     padding: 0;
-    font-family: "Mark OT Bold",sans-serif;
+    font-family: "Mark OT Bold", sans-serif;
     box-sizing: border-box;
     /* "MarkOT-Medium" */
 }
-body{
+
+
+/* utils */
+
+.headings {
+    font-size: 95px;
+    color: white;
+    margin: 35px 80px;
+    z-index: 2;
+}
+.zoom{
+    transition: all 0.3s ease;
+    
+}
+.animation:hover .zoom {
+    transform: scale(1.1);
+}
+
+.round-btn{
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #961612;
+    margin: 0 5px;
+}
+
+/* utils */
+
+
+body {
     width: 100%;
-    height: 200vh;
     background-image: linear-gradient(#FBB417, #FFE600);
 }
-header{
+header {
     width: 100%;
     height: 112px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-.navbar{
+
+.navbar {
     width: 1170px;
     height: 92px;
     background-color: #FFE600;
@@ -27,18 +58,20 @@ header{
     align-items: center;
     justify-content: space-evenly;
     padding: 0 17px;
-    
+
 }
-.logo{
+
+.logo {
     width: 92px;
     height: 92px;
-    background-image:url('/images/logos/logo-lays.png');
+    background-image: url('/images/logos/logo-lays.png');
     background-size: contain;
     background-repeat: no-repeat;
-    
-    
+
+
 }
-ul{
+
+ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -48,7 +81,8 @@ ul{
     line-height: 1;
     font-weight: 500;
 }
-ul >li{
+
+ul>li {
 
     letter-spacing: -1px;
     padding: 8px 15px;
@@ -56,14 +90,16 @@ ul >li{
     cursor: pointer;
     transition: all .5s ease;
 }
-.search-icon{
+
+.search-icon {
     width: 24px;
     height: 24px;
     background-image: url('/images/logos/search-icon.png');
-    
-    
+
+
 }
-.language{
+
+.language {
     border: 1px solid black;
     width: 35px;
     height: 30px;
@@ -73,40 +109,46 @@ ul >li{
     margin-right: 15px;
     margin-bottom: 2px;
     transition: all .5s ease;
-    
+
 }
-.container--search{
+
+.container--search {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-ul>li:hover, .language:hover{
+
+ul>li:hover,
+.language:hover {
     background-color: #F13128;
     color: white;
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-.container-main{
+
+.container-main {
     width: 1170px;
     height: 100%;
     display: grid;
-    grid-template-rows: repeat(6,auto);
+    grid-template-rows: repeat(6, auto);
     gap: 20px;
 }
 
-.banner-first{
+.banner-first {
     height: 425px;
     width: 1170px;
     background-image: url('/images/banners/banner-1.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
-.products{
+
+.products {
     height: 771px;
     width: 1170px;
     background-color: #F13128;
@@ -114,83 +156,349 @@ main{
     display: flex;
     flex-direction: column;
 }
-.products-top{
+
+.products-top {
     width: 1170px;
     height: 23%;
-background-image: url('/images/banners/bg-products-top.jpg');
+    background-image: url('/images/banners/bg-products-top.jpg');
 
 
 }
-.products-bottom{
+
+
+
+.products-bottom {
     width: 1170px;
     height: 23%;
     background-image: url('/images/banners/bg-products-bottom.jpg');
-    background-size:cover;
+    background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
     z-index: 0;
-    
+
 
 }
-.products-container{
-    align-self:flex-end;
+
+.products-container {
+    align-self: flex-end;
     width: 1170px;
     height: 594px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.products-cards-container{
-    
+
+.products-cards-container {
+
     width: 86%;
     height: 516px;
-    background-color: #FFE600;
+
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
     z-index: 10;
-    
-    
-    
+    cursor: pointer;
+    user-select: none;
+
+
 }
 
-.product-cards{
+.product-cards {
     width: 336px;
     height: 516px;
-    /* background-color: rgb(13, 85, 61);
-     */
     flex-shrink: 0;
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.product-images{
+
+.product-images {
     width: 100%;
     height: 336px;
     overflow: hidden;
 }
-.product-images>img{
+
+.product-images>img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: all 0.3s ease;
 }
-.product-cards:hover .zoom{
-    transform: scale(1.1);
-}
-.product--text{
+
+
+
+.product--text {
     color: white;
 }
+
 .products-cards-container::-webkit-scrollbar {
     display: none;
-  }
-  .btn-product{
+}
+
+.btn-product {
     width: 126px;
     height: 40px;
     border-radius: 30px;
     border: none;
     background-color: #da291c;
     color: white;
+    margin-bottom: 20px;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.btn-product:hover {
+    background-color: #FAD002;
+    color: black;
+}
+
+.product--text,
+.btn-product {
+    margin-left: 15px;
+}
+
+.lays {
+    margin-bottom: 40px;
+}
+
+.products-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.products-btn>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.round-btn-container {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+
+.selected {
+    background-color: #FFE600;
+}
+
+.round-btn:hover {
+    background-color: #FFE600;
+}
+
+.recipes {
+    height: 726px;
+    width: 100%;
+    background-color: #F6BE07;
+    position: relative;
+}
+
+.recipes-top {
+    height: 23%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: #F6BF06;
+    
+
+}
+
+.recipes-img {
+    height: fit-content;
+    width: 69%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    
+}
+
+.recipes-img>img {
+
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+.recipes-card-container {
+    background-color: #F6BF06;
+    width: 100%;
+    height: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.recipes-cards {
+    background-color: #F6BF06;
+    height: 100%;
+    width:1010px ;
+    display: grid;
+    grid-template-columns: repeat(5, 314px);
+    gap: 34px;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.recipes-cards::-webkit-scrollbar {
+    display: none;
   }
+
+.recipes-card {
+    background-color: #084066;
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+    
+    
+}
+
+.recipes-image{
+    background-color: aqua;
+    grid-area: a;
+    max-height: 280px;
+    overflow: hidden;
+}
+.recipes-card-bottom{
+    background-color: #FFE003;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.recipes-image>img{
+    object-fit: contain;
+}
+.recipes-text{
+    width: 100%;
+    height: 50%;
+    padding: 30px 30px;
+}
+.recipes-btn-area{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+}
+.btn-recipes{
+    background-color: #DA291C;
+    height: 40px;
+    width: 155px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    
+}
+.rating{
+    width: 68px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.rating >p{
+    font-size: 16px;
+    color: black;
+}
+.recipes-bottom-banner{
+    width: 254px;
+    height: 39px;
+    background-image: url("/images/banners/recipes-bottom.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    bottom: 0;
+}
+.recipes-round-btn-container{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.recipes-round-btn{
+    background-color: white;
+}
+.recipes-round-btn:hover{
+    background-color: black;
+}
+.recipes-btn-selected{
+    background-color: black;
+}
+.fa-star{
+  color: rgb(0, 0, 0);
+  
+}
+.animation:hover .btn-recipes{
+    background-color: #4b8ef2;
+    color: black;
+    transition: all .3s ease;
+}
+.animation:hover .fa-star{
+    color: #4b8ef2;
+    animation: pulse .4s 1;
+    transition: all .3s ease;
+}
+.videos{
+    width: 100%;
+    height: 638px;
+    background-color: #00AB4E;
+    position: relative;
+}
+.videos-banner-top{
+ width: 100%;
+ height: 50%;
+ background-image: url('/images/banners/videos-top.jpeg');
+ background-size: contain;
+ background-repeat: no-repeat;
+ position: absolute;
+ top: 0;
+}
+.videos-banner-bottom{
+    width: 100%;
+    height: 46%;
+    background-image: url('/images/banners/videos-bottom.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+   }
+.videos-main-container{
+    height: 61%;
+    width: 100%;
+    background-color: #da291c;
+    position: relative;
+    top: 27%;
+    z-index: 2;
+}
+
+
+
+
+
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
